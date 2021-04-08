@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "26490816016",
+    "firebase_url": "https://recycleview-b7d5c.firebaseio.com",
+    "project_id": "recycleview-b7d5c",
+    "storage_bucket": "recycleview-b7d5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26490816016:android:c647f2f1c9de10106fac95",
+        "android_client_info": {
+          "package_name": "com.example.flutter_firebase_database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26490816016-euuthj2gsli4jkqpng7aep5elf4er4k5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzEXHwadgyR3yV3__V6PswQXcv5wNRMY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26490816016-euuthj2gsli4jkqpng7aep5elf4er4k5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
