@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'Screen/menu_screen.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -10,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Create(),
+      home: Menu(),
       theme: ThemeData(
         colorScheme: ColorScheme.dark(),
         //accent color untuk merubah hover highlight dari textfield
@@ -20,80 +22,24 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Create extends StatefulWidget {
-  @override
-  _CreateState createState() => _CreateState();
-}
+// class Read extends StatefulWidget {
+//   @override
+//   _ReadState createState() => _ReadState();
+// }
 
-class _CreateState extends State<Create> {
- 
-  @override
-  Widget build(BuildContext context) {
-    final tt = Theme.of(context).textTheme;
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Firebase Create'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: (Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              'Fill This Form',
-              style: tt.headline4
-                  .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            TextFormField(
-              decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.person),
-                  labelText: 'Name',
-                  hintText: 'Input name',
-                  border: OutlineInputBorder()),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.phone),
-                  labelText: 'Phone',
-                  hintText: 'Input phone number',
-                  border: OutlineInputBorder()),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.location_on),
-                  labelText: 'Location',
-                  hintText: 'Input location',
-                  border: OutlineInputBorder()),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                  onPressed: () {
-                    print('hello world');
-                  },
-                  child: Text('SUBMIT')),
-            )
-          ],
-        )),
-      ),
-    );
-  }
-}
+// class _ReadState extends State<Read> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Read Firebase'),
+//       ),
+//       body: Container(
+//           margin: EdgeInsets.symmetric(horizontal: 20), child: FutureBuilder(future: ,builder: (context,snapshot){},)),
+//     );
+//   }
+// }
+
 
 
 // idea untuk pembuatan future builder
