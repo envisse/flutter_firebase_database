@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_database/Screen/read_screen.dart';
 import 'create_screen.dart';
-import 'package:firebase_database/firebase_database.dart';
 
 class Menu extends StatelessWidget {
-  final databaseReference = FirebaseDatabase.instance.reference();
   @override
   Widget build(BuildContext context) {
-    final tt = Theme.of(context).textTheme;
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Firebase example'),
